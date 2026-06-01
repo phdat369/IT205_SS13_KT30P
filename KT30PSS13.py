@@ -16,7 +16,7 @@ while True:
 4. Xóa xe khỏi bãi (khi xe ra)
 5. Thoát chương trình
 ===========================================================
-Lựa chọn chương trình của bạn (1-5): """)
+Lựa chọn chương trình của bạn (1-5): """).strip()
     if choose == "1":
         type_new_car = input("Nhập loại xe mới: ").strip()
         while type_new_car == "":
@@ -44,7 +44,7 @@ Lựa chọn chương trình của bạn (1-5): """)
                 print(f'{car.get("id"): <5} | {car.get("type"): <10} | {car.get("owner")}')
         print()
     elif choose == "3":
-        search_car = input("Nhập id của xe cần tìm: ")
+        search_car = input("Nhập id của xe cần tìm: ").strip()
         valid = True
         if not search_car.isdigit():
             print("ID không hợp lệ")
@@ -58,7 +58,7 @@ Lựa chọn chương trình của bạn (1-5): """)
             print(f"Không tìm thấy xe có ID {search_car}")
         print()
     elif choose == "4":
-        delete_car = input("Nhập id của xe cần xóa: ")
+        delete_car = input("Nhập id của xe cần xóa: ").strip()
         valid = True
         if not delete_car.isdigit():
             print("ID không hợp lệ")
